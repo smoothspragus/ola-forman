@@ -1,23 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { Link, useStaticQuery, graphql} from "gatsby"
+import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
+import Footer from "../components/Footer"
+import Video from "../components/CV"
+export const query = graphql`
+query IndexQuery {
+  icon: file(relativePath: {eq: "RBY1.png"}) {
+    childImageSharp{
+      fluid(maxWidth: 1200){
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+}
+`
 
-const IndexPage = () => (
+const IndexPage = ({data}) => {
+  return(
   <Layout>
     <SEO title="Home" />
-    <h1>test</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/page-3/">Go to page 3</Link> <br />
-  
+    <Hero />  
+    <Footer />
   </Layout>
-)
+)}
+
 
 export default IndexPage

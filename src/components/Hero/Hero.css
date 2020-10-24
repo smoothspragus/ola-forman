@@ -1,0 +1,45 @@
+/*.Container {
+    display:flex;
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+*/
+.pic-c {
+    width: 500px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+
+    
+}
+/*.pic-c > div { 
+    border-radius: 50%;
+    border: 15px solid  rgba(25,82,125,1);
+    
+}
+
+*/
+.Hero-c {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+.Hero-text  {
+    max-width: 50%;
+    margin-top: 65px;
+    color: black;
+}
+
+p { 
+    font-size: 24px;
+    line-height: 1.3;
+    color: black;
+}
+
+h1  {
+    font-size: 48px !important;
+}
