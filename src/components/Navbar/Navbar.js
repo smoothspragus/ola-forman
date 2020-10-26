@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className = "Pages">
                     <Link to ="/"><div>Short Films and Voice Reels</div></Link>
                     <Link to ="/"><div>Poetry and Paintings</div></Link>
-                    <Link to ="/"><div>Gallery</div></Link>
+                    <Link to ="../gallery"><div>Gallery</div></Link>
 
                     <Link className="Navbar-last" to ="/"><div>Contact</div></Link>
                 </div>

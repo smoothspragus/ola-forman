@@ -12,7 +12,7 @@ const Gallery = ({ imageArr}) => {
   
   return (
     <>
-      <Grid>       
+      <Grid style={{backgroundColor: 'black !important'}}>       
         {imageArr.map((img, index) => <CardWrap onClick={() => setImageIndex(index)}> <ProjectCard fluid={img.node.childImageSharp.fluid} />  </CardWrap>)}
       </Grid>
       {imageIndex !== -1 &&  (

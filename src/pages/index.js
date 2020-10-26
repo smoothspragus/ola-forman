@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
-import Footer from "../components/Footer"
+
 import Video from "../components/CV"
 export const query = graphql`
 query IndexQuery {
@@ -24,7 +24,7 @@ const IndexPage = ({data}) => {
   <Layout>
     <SEO title="Home" />
     <Hero />  
-    <Footer />
+    
   </Layout>
 )}
 

@@ -10,7 +10,7 @@ query galleryQuery {
       node {
         name
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -22,11 +22,9 @@ query galleryQuery {
 
 const SecondPage = ({data}) => (
   <Layout>
-    <Gallery imageArr={data.allFile.edges} />
+    <Gallery style={{backgroundColor: 'black'}} imageArr={data.allFile.edges} />
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+   
   </Layout>
 )
 
