@@ -1,4 +1,7 @@
-/* /* .Navbar {
+import styled from 'styled-components'
+import { Link } from 'gatsby'
+
+export const NavC = styled.div`
     width: 100%;
     margin: 0px;
     background: rgb(30,60,84);
@@ -6,33 +9,26 @@
     justify-content: center;
     display:flex;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    
-} */
-/* 
-.Navbar--links {
+`
+export const NavItems = styled.div`
     display: flex;
     margin: 1.8rem; 
     max-width: 1200px;
     width: 100%;
     justify-content: space-between;
-    
-} */
-
-/* .Navbar--links > .Pages  > a {
-    background-image: none;
+`
+export const NavLinks = styled(Link)`
+background-image: none;
     margin-left: 2.2rem;
     font-size: 0.9rem;
     text-decoration:none;
     display: inline-flex;
     color: whitesmoke;
     line-height: 33px;
-    text-shadow: none;
+    text-shadow: none;`
 
-    
-}
-
-.Navbar--links > .Name > a  {
-     background-image: none;
+export const NavName = styled(Link)`
+background-image: none;
      font-size: 42px;
      text-decoration:none;
      display: flex;
@@ -40,43 +36,23 @@
      color: whitesmoke;
      text-shadow: none;
      font-weight: 700;
-   
- }
-
-.Pages > a > div {
-    color: whitesmoke;
+`
+export const NavAnime = styled.div`
+color: whitesmoke;
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-    
- }
-
- .Pages > a > div:hover {
-     color: whitesmoke;
- } 
-    
-
-.Pages > a > div:after {
-    border-bottom: solid 1px whitesmoke;
-    transform: scaleX(0);
-    display: block;
-    content: "";
-    transition: transform 250ms ease-in-out;
-}
-.Pages > a > div:hover:after {
-    transform: scaleX(1);
-}
-.Pages > a > div:hover:after {
-    transform-origin: 0% 50%;
-}
-
-.Navbar-last {
-    margin-right: 0;
-}
-
-.Pages {
-    margin-left: auto;
-    display: flex;
-    justify-content: space-around;
-    
-} */ 
+    &:after {
+        border-bottom: solid 1px whitesmoke;
+        transform: scaleX(0);
+        display: block;
+        content: "";
+        transition: transform 351ms ease-in-out;
+    }
+    &:hover:after {
+        transform: scaleX(1);
+        
+    }
+    &:hover:after {
+        transform-origin: 0% 50%;
+    }`

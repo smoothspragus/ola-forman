@@ -1,25 +1,26 @@
 import React from 'react'
-import { Link } from "gatsby"
+
 import "./Navbar.css"
+import { NavC, NavItems, NavLinks, NavName, NavAnime} from './Navbar.styles'
 
 
 const Navbar = () => {
     return (
-        <nav className = "Navbar"> 
-            <div className ="Navbar--links">
-                <div className = "Name">
-                    <Link to ="/">Ola Forman</Link>
+        <NavC> 
+            <NavItems>
+                <div>
+                    <NavName to ="/">Ola Forman</NavName>
                 </div>
-                <div className = "Pages">
-                    <Link to ="/"><div>Short Films and Voice Reels</div></Link>
-                    <Link to ="/"><div>Poetry and Paintings</div></Link>
-                    <Link to ="../gallery"><div>Gallery</div></Link>
+                <div>
+                    <NavLinks to ="/"><NavAnime>Short Films and Voice Reels</NavAnime></NavLinks>
+                    <NavLinks to ="/"><NavAnime>Poetry and Paintings</NavAnime></NavLinks>
+                    <NavLinks to ="../gallery"><NavAnime>Gallery</NavAnime></NavLinks>
 
-                    <Link className="Navbar-last" to ="/"><div>Contact</div></Link>
+                    <NavLinks style={{marginRight: '0'}} to ="/"><NavAnime>Contact</NavAnime></NavLinks>
                 </div>
-            </div>
+            </NavItems>
             
-        </nav>
+        </NavC>
     )
 }
 
